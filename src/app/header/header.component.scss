@@ -1,0 +1,21 @@
+a{cursor: pointer;}
+.navbar-brand{
+    text-transform: uppercase;
+    font-weight: 700;    
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #FF1E57 50%,  #0A3348 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* For WebKit browsers */
+    background-clip: text;
+    color: transparent; /* For other browsers */
+}
+.nav-link{font-size: 13px;font-weight: 400;text-transform: uppercase;color: #0A3348;    letter-spacing: 1px;
+}
+.nav-link:hover{color: #FF1E57;}
+.nav-link.active{
+    color: #FF1E57;
+    font-weight: 600;
+}
+
+  

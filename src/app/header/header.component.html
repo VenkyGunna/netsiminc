@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow">
+    <div class="container-fluid section-padding" >
+      <a class="navbar-brand" (click)="gotoURL('/')">Netsim inc</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link me-4" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-4" routerLink="/aboutus" routerLinkActive="active" >About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-4" routerLink="Offering" routerLinkActive="active" >Our Offering</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-4" routerLink="clients" routerLinkActive="active">Our Clients</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-4" routerLink="contactus" routerLinkActive="active">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>

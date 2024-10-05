@@ -1,0 +1,35 @@
+html, body { height: 100%; }
+body { margin: 0; 
+    padding-top: 80px;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #0A3348;
+ }
+ .section-padding{
+    padding: 16px !important;
+}
+
+.p1-clr{
+    color: #FF1E57;
+}
+.p2-clr{
+    color: #0A3348;
+}
+.s1-clr{
+color: #637987 !important;
+}
+.common-header{
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+@media (min-width: 992px) { /* Target large screens */
+    .navbar-nav {
+      margin-left: 60px !important; /* Adjust padding as needed */
+    }
+    .section-padding{
+        padding: 12px 12% !important;
+        
+    }
+    
+    
+  }

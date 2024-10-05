@@ -1,0 +1,8 @@
+<app-header></app-header>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+
+<!-- Scroll to Top Button -->
+<button (click)="scrollToTop()" class="scroll-to-top " *ngIf="showScroll" mat-fab aria-label="Example icon button with a menu icon">
+  <mat-icon style="font-size: 16px;margin-top: 6px;">arrow_upward</mat-icon>
+</button>
