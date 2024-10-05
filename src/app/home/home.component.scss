@@ -6,6 +6,31 @@
     background-color: #f6f6fe;
     height: 340px;
 }
+
+$animationSpeed: 40s;
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 7))}
+}
+
+.slider {
+	height: 100px;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: auto;
+	
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+		width: calc(250px * 14);
+	}
+	.slide {
+		height: 100px;
+		width: 250px;
+	}
+}
 .s7-card{
     height: 340px;
     background: url(../../assets/images/home_bottom.jpg);
@@ -123,6 +148,14 @@
     font-size: 18px !important;
 font-weight: 500 !important;
 }
+.s8-subheader{
+    font-weight: 500 !important;
+    text-transform: capitalize;
+}
+.s8-subheader:hover{
+    color: #FF1E57;
+    cursor: pointer;
+}
 .base-color-cls{
     color: #FF1E57;
 }
@@ -162,6 +195,7 @@ a:hover{color: #0A3348;}
   width: 80px; /* Width of the circle */
   height: 80px; /* Height of the circle */
   background-color: transparent;
+  margin-bottom: 16px;
 }
 
 .circle {
@@ -179,14 +213,33 @@ a:hover{color: #0A3348;}
   font-size: 28px; /* Icon size */
   color: #FF1E57; /* Icon color */
 }
+.s8-citem{
+    height: auto !important;
 
+}
+.s8-citem .card:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+ .s8-btns{
+    background-color: #FF1E57 !important;
+    color: #fff;
+    width: 36px;
+    height: 36px;
+ }
 
 @media (min-width: 992px) { /* Target large screens */
     .carousel-item {
         height: 86vh !important;
     }
      
-    
+    .s8-citem{
+        height: 320px !important;
+       
+    }
+    .s8-citem .card{
+       min-height: 320px;
+    }
   }
   @media (max-width:991px) {
     .carousel-caption {
