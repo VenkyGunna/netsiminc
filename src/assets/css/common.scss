@@ -17,11 +17,29 @@ body { margin: 0;
 .s1-clr{
 color: #637987 !important;
 }
-.common-header{
-    font-size: 1.25rem;
+.p1-header{
+    font-size: 2.25rem;
     font-weight: 700;
 }
-
+.p2-header{
+    font-size: 1.875rem;
+    font-weight: 600;
+    text-align: center;
+}
+.s1-header{
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0A3348 !important;
+    opacity: 0.8;
+    z-index: 0; /* Ensure it’s above the image but below the caption */
+}
 @media (min-width: 992px) { /* Target large screens */
     .navbar-nav {
       margin-left: 60px !important; /* Adjust padding as needed */
