@@ -1,12 +1,12 @@
 import { Component, Renderer2 } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [SharedModule],
+  imports: [SharedModule,RouterModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

@@ -48,6 +48,21 @@ color: #637987 !important;
     text-transform: uppercase;
     font-size: 13px;
 }
+
+.breadcrumb-item{
+    color: #637987;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .breadcrumb-item.active{
+    color: #fff;
+  }
+  .breadcrumb-item:hover{
+    color: #fff;
+  }
+  
 @media (min-width: 992px) { /* Target large screens */
     .navbar-nav {
       margin-left: 60px !important; /* Adjust padding as needed */
