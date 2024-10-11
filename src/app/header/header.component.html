@@ -1,27 +1,81 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow">
-    <div class="container-fluid section-padding" >
-      <a class="navbar-brand" (click)="gotoURL('/')">Netsim inc</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link me-4" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link me-4" routerLink="/aboutus" routerLinkActive="active" >About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link me-4" routerLink="Offering" routerLinkActive="active" >Our Offering</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link me-4" routerLink="clients" routerLinkActive="active">Our Clients</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link me-4" routerLink="contactus" routerLinkActive="active">Contact Us</a>
-          </li>
-        </ul>
-      </div>
+  <div class="container-fluid section-padding">
+    <a class="navbar-brand" (click)="gotoURL('/')">Netsim inc</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link me-4" routerLink="/" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link me-4" routerLink="/aboutus" routerLinkActive="active">About Us</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link me-4 " routerLink="Offering" routerLinkActive="active" 
+            >Our Offering
+            <i  class="fa-solid fa-angle-down"></i>
+          </a>
+          <!-- Submenu on hover -->
+          <ul class="submenu">
+            <li class="has-submenu parent-menu-item">
+              <a style="margin-right: 12px;" href="javascript:void(0)"> Artificial Intelligence
+                <i class="fa-solid fa-angle-right " style="float: right;"></i>
+              </a>
+
+              <ul class="submenu">
+                <li><a routerLink="/" class="sub-menu-item">OverView</a></li>
+                <li><a routerLink="/" class="sub-menu-item">Opportunity/ Challenges</a>
+                </li>
+                <li><a routerLink="/" class="sub-menu-item">Our Methodology</a></li>
+                <li><a routerLink="/" class="sub-menu-item">Services and Solutions</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="has-submenu parent-menu-item">
+              <a style="margin-right: 12px;" href="javascript:void(0)"> Cybersecurity SOLUTIONS
+                <i class="fa-solid fa-angle-right " style="float: right;"></i>
+              </a>
+              <ul class="submenu">
+                <li><a routerLink="/" class="sub-menu-item">OverView</a></li>
+                <li><a routerLink="/" class="sub-menu-item">Cybersecurity Assessment</a></li>
+                <li><a routerLink="/" class="sub-menu-item">Cybersecurity Testing</a></li>
+                <li><a routerLink="/" class="sub-menu-item">Cybersecurity Solutions</a></li>
+              </ul>
+            </li>
+
+            <li class="has-submenu parent-menu-item">
+              <a style="margin-right: 12px;" href="javascript:void(0)"> STAFFING SOLUTIONS
+                <i class="fa-solid fa-angle-right " style="float: right;"></i>
+              </a>
+              <ul class="submenu">
+                <li><a routerLink="/" class="sub-menu-item">Contract Local Talent</a></li>
+                <li><a routerLink="/" class="sub-menu-item">Offshore Talent</a></li>
+                <li><a routerLink="/" class="sub-menu-item">Permanent Placement</a></li>
+                <li><a routerLink="/" class="sub-menu-item">Veterans Talent</a></li>
+              </ul>
+            </li>
+
+            <li><a routerLink="/" class="sub-menu-item">SOURCING AND PROCUREMENT</a></li>
+            <li><a routerLink="/" class="sub-menu-item">PROJECTS & BUSINESS AGILITY</a></li>
+            <li><a routerLink="/" class="sub-menu-item">CLOUD PLATFORMS</a></li>
+            <li class="active"><a routerLink="/data-intelligence" class="sub-menu-item active">DATA INTELLIGENCE</a></li>
+            <li><a routerLink="/mobile-solutions" class="sub-menu-item">DIGITAL & MOBILE SOLUTIONS</a></li>
+            <li><a routerLink="/app-solutions" class="sub-menu-item">APP SOLUTIONS</a></li>
+            <li><a routerLink="/managed-solutions" class="sub-menu-item">Managed Solutions</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link me-4" routerLink="clients" routerLinkActive="active">Our Clients</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link me-4" routerLink="contactus" routerLinkActive="active">Contact Us</a>
+        </li>
+      </ul>
     </div>
+  </div>
 </nav>

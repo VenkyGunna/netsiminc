@@ -12,10 +12,72 @@ a{cursor: pointer;}
 }
 .nav-link{font-size: 13px;font-weight: 400;text-transform: uppercase;color: #0A3348;    letter-spacing: 1px;
 }
-.nav-link:hover{color: #FF1E57;}
+.fa-caret-down{
+    color: #637987;
+}
+.nav-link:hover,.fa-caret-down:hover,.dp-dn:hover{color: #FF1E57;}
 .nav-link.active{
     color: #FF1E57;
     font-weight: 600;
 }
 
+  /* Style for main menu items */
+.nav-item {
+    position: relative;
+  }
+  
+  .nav-item .submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    z-index: 1000;
+    min-width: 240px;
+    border-radius: 8px;
+  }
+  
+  .nav-item .submenu li {
+    margin-bottom: 10px;
+    text-decoration: none;
+    list-style: none;
+    font-size: 11px;
+    text-transform: uppercase;
+  }
+  
+  .nav-item .submenu li a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .nav-item .submenu li a:hover {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+  }
+  
+  /* Hover to display submenu */
+  .nav-item:hover > .submenu {
+    display: block;
+  }
+  
+  /* Hover card effects for child menu (2nd level) */
+  .has-submenu .submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .has-submenu:hover > .submenu {
+    display: block;
+  }
+  
   
