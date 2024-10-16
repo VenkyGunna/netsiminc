@@ -62,7 +62,15 @@ color: #637987 !important;
   .breadcrumb-item:hover{
     color: #fff;
   }
-  
+  .svg-curve{
+    transform-origin: top center;
+    transform: scale(2);
+    overflow: hidden;
+  }
+  .breadcrumb-bottom-cls{
+    width: 100%;
+    overflow: hidden;
+  }
 @media (min-width: 992px) { /* Target large screens */
     .navbar-nav {
       margin-left: 60px !important; /* Adjust padding as needed */
