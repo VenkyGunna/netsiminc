@@ -14,7 +14,7 @@
         <li class="nav-item">
           <a class="nav-link me-4" routerLink="/aboutus" routerLinkActive="active">About Us</a>
         </li>
-        <li class="nav-item ">
+        <li class="nav-item " routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }">
           <a class="nav-link me-4 " routerLink="Offering" routerLinkActive="active" 
             >Our Offering
             <i  class="fa-solid fa-angle-down"></i>
@@ -27,11 +27,11 @@
               </a>
 
               <ul class="submenu">
-                <li><a routerLink="/" class="sub-menu-item">OverView</a></li>
-                <li><a routerLink="/" class="sub-menu-item">Opportunity/ Challenges</a>
+                <li><a routerLink="/ai-home" class="sub-menu-item">OverView</a></li>
+                <li><a routerLink="/ai-challenge" class="sub-menu-item">Opportunity/ Challenges</a>
                 </li>
-                <li><a routerLink="/" class="sub-menu-item">Our Methodology</a></li>
-                <li><a routerLink="/" class="sub-menu-item">Services and Solutions</a>
+                <li><a routerLink="/ai-methodology" class="sub-menu-item">Our Methodology</a></li>
+                <li><a routerLink="/ai-solutions" class="sub-menu-item">Services and Solutions</a>
                 </li>
               </ul>
             </li>
@@ -41,10 +41,10 @@
                 <i class="fa-solid fa-angle-right " style="float: right;"></i>
               </a>
               <ul class="submenu">
-                <li><a routerLink="/" class="sub-menu-item">OverView</a></li>
-                <li><a routerLink="/" class="sub-menu-item">Cybersecurity Assessment</a></li>
-                <li><a routerLink="/" class="sub-menu-item">Cybersecurity Testing</a></li>
-                <li><a routerLink="/" class="sub-menu-item">Cybersecurity Solutions</a></li>
+                <li><a routerLink="/cybersecurity-home" routerLinkActive="active" class="sub-menu-item">OverView</a></li>
+                <li><a routerLink="/cybersecurity-assessment" routerLinkActive="active" class="sub-menu-item">Cybersecurity Assessment</a></li>
+                <li><a routerLink="/cybersecurity-testing" routerLinkActive="active" class="sub-menu-item">Cybersecurity Testing</a></li>
+                <li><a routerLink="/cybersecurity-solution" routerLinkActive="active" class="sub-menu-item">Cybersecurity Solutions</a></li>
               </ul>
             </li>
 
