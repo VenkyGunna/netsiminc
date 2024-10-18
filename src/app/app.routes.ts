@@ -22,6 +22,9 @@ import { AiMethodologyComponent } from './ai-methodology/ai-methodology.componen
 import { AiHomeComponent } from './ai-home/ai-home.component';
 import { AiChallengeComponent } from './ai-challenge/ai-challenge.component';
 import { AiSolutionsComponent } from './ai-solutions/ai-solutions.component';
+import { OurOfferingComponent } from './our-offering/our-offering.component';
+import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 export const routes: Routes = [
     {
@@ -93,6 +96,11 @@ export const routes: Routes = [
     {
         path:'ai-solutions', component:AiSolutionsComponent
     },
+    {
+        path:'our-offering', component:OurOfferingComponent
+    },
+    {path:'terms-conditions', component:TermsConditionsComponent},
+    {path:'privacy-policy', component:PrivacyPolicyComponent},
     {
         path:'**', redirectTo:'/'
     }
