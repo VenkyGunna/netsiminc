@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-ai-home',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './ai-home.component.scss'
 })
 export class AiHomeComponent {
-
+  constructor(public titleService:Title){
+  }
+  ngOnInit() {
+    this.titleService.setTitle('AI Solutions Overview');
+  }
 }

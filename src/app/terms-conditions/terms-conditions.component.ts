@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-terms-conditions',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './terms-conditions.component.scss'
 })
 export class TermsConditionsComponent {
-
+  constructor(public titleService:Title){
+  }
+  ngOnInit() {
+    this.titleService.setTitle('Terms and conditions');
+  }
 }

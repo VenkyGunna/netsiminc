@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-ai-methodology',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './ai-methodology.component.scss'
 })
 export class AiMethodologyComponent {
-
+  constructor(public titleService:Title){
+  }
+  ngOnInit() {
+    this.titleService.setTitle('AI Methodology');
+  }
 }

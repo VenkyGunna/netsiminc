@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-managed-solutions',
@@ -10,5 +11,9 @@ import { RouterModule } from '@angular/router';
   styleUrl: './managed-solutions.component.scss'
 })
 export class ManagedSolutionsComponent {
-
+  constructor(public titleService:Title){
+  }
+  ngOnInit() {
+    this.titleService.setTitle('Managed solutions');
+  }
 }

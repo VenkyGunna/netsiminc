@@ -5,7 +5,7 @@ import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 import { AbstractControl, FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { CommonModule } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -16,9 +16,13 @@ import { Observable } from 'rxjs';
   styleUrl: './contactus.component.scss'
 })
 export class ContactusComponent {
+  
+  ngOnInit() {
+    this.titleService.setTitle('Contact Us');
+  }
   contactForm: FormGroup;
   isSubmitting = false;
-  constructor(public fb: FormBuilder, public sb: MatSnackBar) {
+  constructor(public fb: FormBuilder, public sb: MatSnackBar,public titleService:Title) {
     this.contactForm = fb.group({
       to_name: ["", [Validators.required, Validators.minLength(6)]],
       from_name: ["Netsim Inc", Validators.required],

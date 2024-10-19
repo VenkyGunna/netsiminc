@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-cyber-security-testing',
@@ -8,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './cyber-security-testing.component.scss'
 })
 export class CyberSecurityTestingComponent {
-
+  constructor(public titleService:Title){
+  }
+  ngOnInit() {
+    this.titleService.setTitle('Cybersecurity testing');
+  }
 }
