@@ -4,26 +4,28 @@
     <div class="container-fluid text-center text-white section-padding " style="z-index: 1;">
         <h1 class="p1-header w36rem mx-auto">We're excited to hear from you!</h1>
         <p class="s1-header w36rem mx-auto">Welcome to the Gateway of Possibilities!
-            At Netsim Inc, we believe in the extraordinary power of connections. We're not just consultants and recruiters- we're catalysts of success, dreamers of big ideas, and partners in your journey towards greatness.
-            
-            </p>
-           
-              <div class="position-absolute bottom-0 start-50 translate-middle-x breadcrumb-bottom-cls " >
+            At Netsim Inc, we believe in the extraordinary power of connections. We're not just consultants and
+            recruiters- we're catalysts of success, dreamers of big ideas, and partners in your journey towards
+            greatness.
 
-                <nav aria-label="breadcrumb" class="align-items-center text-center ">
-                    <ol class="breadcrumb align-items-center justify-content-center">
-                        <li class="breadcrumb-item" routerLink="/">
-                            <a>Home</a>
-                        </li>
-                        <li class="breadcrumb-item active">
-                            <a >Contact Us</a>
-                        </li>
-                    </ol>
-                </nav>
-                <svg class="w-full h-auto svg-curve" viewBox="0 0 2880 48" fill="#fff" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="#fff"></path>
-                </svg>
-            </div>
+        </p>
+
+        <div class="position-absolute bottom-0 start-50 translate-middle-x breadcrumb-bottom-cls ">
+
+            <nav aria-label="breadcrumb" class="align-items-center text-center ">
+                <ol class="breadcrumb align-items-center justify-content-center">
+                    <li class="breadcrumb-item" routerLink="/">
+                        <a>Home</a>
+                    </li>
+                    <li class="breadcrumb-item active">
+                        <a>Contact Us</a>
+                    </li>
+                </ol>
+            </nav>
+            <svg class="w-full h-auto svg-curve" viewBox="0 0 2880 48" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="#fff"></path>
+            </svg>
+        </div>
     </div>
 </section>
 <section class="position-relative section-padding mt-5">
@@ -41,7 +43,8 @@
                         <h5 class="card-title">Phone
                         </h5>
                         <p class="card-text s1-clr">
-                            Don't hesitate to give us a call. We're excited to chat with you and bring your goals to life!
+                            Don't hesitate to give us a call. We're excited to chat with you and bring your goals to
+                            life!
                         </p>
                         <p class="p1-clr">
                             9876543210
@@ -64,7 +67,8 @@
                         <h5 class="card-title">Email
                         </h5>
                         <p class="card-text s1-clr">
-                            Feel free to drop us a line whenever you're ready to kickstart your consulting and recruiting journey.
+                            Feel free to drop us a line whenever you're ready to kickstart your consulting and
+                            recruiting journey.
                         </p>
                         <p class="p1-clr">
                             customercare&#64;netsiminc.com
@@ -103,40 +107,66 @@
             <img src="../../assets/images/contact.svg" class="img-fluid" alt="Image 3">
         </div>
         <div class="col-md-5">
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Name:</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ex: Narsimha A">
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email:</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ex: narsi@gmail.com">
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Mobile:</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ex: 9876543210">
-              </div>
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Your Question:</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Subject:">
-              </div>
-              <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Your Comment:</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Message:" rows="3"></textarea>
-              </div>
-              <button type="button" class="btn p1-btn">Send Message</button>
+            <form [formGroup]="contactForm" (ngSubmit)="sendEmail($event)">
+                <div class="mb-3">
+                    <label for="to_name" class="form-label">Name:</label>
+                    <input type="text" class="form-control" formControlName="to_name" id="to_name"
+                        [ngClass]="{'is-invalid': to_name?.invalid && (to_name?.dirty || to_name?.touched)}"
+                        placeholder="Ex: Narsimha A">
+                    <!-- Error Messages -->
+                    <div *ngIf="to_name?.invalid && (to_name?.dirty || to_name?.touched)" class="invalid-feedback">
+                        <div *ngIf="to_name?.errors?.['required']">Name is required.</div>
+                        <div *ngIf="to_name?.errors?.['minlength']">Name must be at least 6 characters.</div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="to_email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" formControlName="to_email" id="to_email"
+                        [ngClass]="{'is-invalid': to_email?.invalid && (to_email?.dirty || to_email?.touched)}"
+                        placeholder="Ex: narsi@gmail.com">
+                    <!-- Error Messages -->
+                    <div *ngIf="to_email?.invalid && (to_email?.dirty || to_email?.touched)" class="invalid-feedback">
+                        <div *ngIf="to_email?.errors?.['required']">Email is required.</div>
+                        <div *ngIf="to_email?.errors?.['email']">Email is invalid</div>
+
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="subject" class="form-label">Your Question:</label>
+                    <input type="text" class="form-control" formControlName="subject" id="subject"
+                        [ngClass]="{'is-invalid': subject?.invalid && (subject?.dirty || subject?.touched)}"
+                        placeholder="Question:">
+                    <!-- Error Messages -->
+                    <div *ngIf="subject?.invalid && (subject?.dirty || subject?.touched)" class="invalid-feedback">
+                        <div *ngIf="subject?.errors?.['required']">Question is required.</div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="message" class="form-label">Your Comments:</label>
+                    <textarea class="form-control" formControlName="message" id="message"
+                        [ngClass]="{'is-invalid': message?.invalid && (message?.dirty || message?.touched)}"
+                        placeholder="Comments:" rows="3"></textarea>
+                    <!-- Error Messages -->
+                    <div *ngIf="message?.invalid && (message?.dirty || message?.touched)" class="invalid-feedback">
+                        <!-- <div *ngIf="message?.errors?.['required']">Comments are required.</div> -->
+                        <div *ngIf="message?.errors?.['minlength']">Comments must be at least 30 characters.</div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn p1-btn" [disabled]="isSubmitting">
+                    <span *ngIf="!isSubmitting">Send Message</span>
+                    <span *ngIf="isSubmitting">
+                        <i class="fa fa-spinner fa-spin"></i> Sending...
+                    </span>
+                </button>
+            </form>
 
         </div>
     </div>
-    <form class="contact-form" (submit)="sendEmail($event)">
-        <label>Name</label>
-        <input type="text" name="user_name">
-        <label>Email</label>
-        <input type="email" name="user_email">
-        <label>Message</label>
-        <textarea name="message"></textarea>
-        <input type="submit" value="Send">
-      </form>
-      
+
 </section>
 <!-- Section 7 -->
 <div class="position-relative section-padding s7-card mt-5">
@@ -148,7 +178,8 @@
 </div>
 
 <section class="mt-5 pb-5 section-padding align-items-center text-center">
-    <p class="pg-subheading1 mx-auto w36rem" >
-        Whether you're seeking consulting expertise or recruiting support, we're here to make it a truly memorable and successful experience. Get in touch with us today and let's get started!
+    <p class="pg-subheading1 mx-auto w36rem">
+        Whether you're seeking consulting expertise or recruiting support, we're here to make it a truly memorable and
+        successful experience. Get in touch with us today and let's get started!
     </p>
 </section>
