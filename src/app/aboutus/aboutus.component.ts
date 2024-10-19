@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -9,5 +10,9 @@ import { RouterModule } from '@angular/router';
   styleUrl: './aboutus.component.scss'
 })
 export class AboutusComponent {
-
+  constructor(public titleService:Title){
+  }
+  ngOnInit() {
+    this.titleService.setTitle('About us');
+  }
 }
