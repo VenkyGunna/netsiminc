@@ -25,7 +25,7 @@ export class ContactusComponent {
   constructor(public fb: FormBuilder, public sb: MatSnackBar,public titleService:Title) {
     this.contactForm = fb.group({
       to_name: ["", [Validators.required, Validators.minLength(6)]],
-      from_name: ["Netsim Inc", Validators.required],
+      from_name: ["NetSim", Validators.required],
       to_email: ['', [Validators.required, Validators.email]],  // Async validator in the third argument
       from_email: ["venky.it232530@gmail.com", Validators.required],
       subject: ["", [Validators.required]],

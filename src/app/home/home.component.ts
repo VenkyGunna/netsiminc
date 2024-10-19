@@ -14,7 +14,7 @@ export class HomeComponent {
   constructor(public router:Router,public titleService:Title,public renderer:Renderer2){
   }
   ngOnInit() {
-    this.titleService.setTitle('Netsim Inc Home');
+    this.titleService.setTitle('NetSim Home');
   }
   gotoURL(url:any){
     this.router.navigate([url]);
