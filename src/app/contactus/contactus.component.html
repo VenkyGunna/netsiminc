@@ -112,7 +112,7 @@
                     <label for="to_name" class="form-label">Name:</label>
                     <input type="text" class="form-control" formControlName="to_name" id="to_name"
                         [ngClass]="{'is-invalid': to_name?.invalid && (to_name?.dirty || to_name?.touched)}"
-                        placeholder="Ex: Narsimha A">
+                        placeholder="First name, Last name">
                     <!-- Error Messages -->
                     <div *ngIf="to_name?.invalid && (to_name?.dirty || to_name?.touched)" class="invalid-feedback">
                         <div *ngIf="to_name?.errors?.['required']">Name is required.</div>
@@ -124,7 +124,7 @@
                     <label for="to_email" class="form-label">Email:</label>
                     <input type="email" class="form-control" formControlName="to_email" id="to_email"
                         [ngClass]="{'is-invalid': to_email?.invalid && (to_email?.dirty || to_email?.touched)}"
-                        placeholder="Ex: narsi@gmail.com">
+                        placeholder="xyz@email.com">
                     <!-- Error Messages -->
                     <div *ngIf="to_email?.invalid && (to_email?.dirty || to_email?.touched)" class="invalid-feedback">
                         <div *ngIf="to_email?.errors?.['required']">Email is required.</div>
@@ -135,9 +135,9 @@
 
                 <div class="mb-3">
                     <label for="subject" class="form-label">Your Question:</label>
-                    <input type="text" class="form-control" formControlName="subject" id="subject"
+                    <input type="text" class="form-control" formControlName="subject" id="subject" placeholder="Enter your question"
                         [ngClass]="{'is-invalid': subject?.invalid && (subject?.dirty || subject?.touched)}"
-                        placeholder="Question:">
+                        >
                     <!-- Error Messages -->
                     <div *ngIf="subject?.invalid && (subject?.dirty || subject?.touched)" class="invalid-feedback">
                         <div *ngIf="subject?.errors?.['required']">Question is required.</div>
@@ -146,9 +146,9 @@
 
                 <div class="mb-3">
                     <label for="message" class="form-label">Your Comments:</label>
-                    <textarea class="form-control" formControlName="message" id="message"
+                    <textarea placeholder="Enter your comments" class="form-control" formControlName="message" id="message"
                         [ngClass]="{'is-invalid': message?.invalid && (message?.dirty || message?.touched)}"
-                        placeholder="Comments:" rows="3"></textarea>
+                         rows="3"></textarea>
                     <!-- Error Messages -->
                     <div *ngIf="message?.invalid && (message?.dirty || message?.touched)" class="invalid-feedback">
                         <!-- <div *ngIf="message?.errors?.['required']">Comments are required.</div> -->
@@ -168,6 +168,7 @@
     </div>
 
 </section>
+
 <!-- Section 7 -->
 <div class="position-relative section-padding s7-card mt-5">
     <div class="overlay" style="z-index: 0;"></div> <!-- Overlay div -->
@@ -183,3 +184,28 @@
         successful experience. Get in touch with us today and let's get started!
     </p>
 </section>
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Launch static backdrop modal
+  </button>
+  
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 s1-clr "  id="staticBackdropLabel">Thank you!</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+             Your email has been successfully sent. Our team will review your inquiry and get in touch with you shortly.
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn p1-btn" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>

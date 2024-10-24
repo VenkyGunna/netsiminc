@@ -84,36 +84,6 @@ ul {
 .google-bg{
   background: #DD4B39;
 }
-.footer-widget-heading h3 {
-  color: #fff;
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 40px;
-  position: relative;
-}
-.footer-widget-heading h3::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -15px;
-  height: 2px;
-  width: 50px;
-  background: #FF1E57;
-}
-.footer-widget ul li {
-  display: inline-block;
-  float: left;
-  width: 50%;
-  margin-bottom: 12px;
-}
-.footer-widget ul li a:hover{
-  color: #FF1E57;
-}
-.footer-widget ul li a {
-    text-decoration: none;
-  color: #878787;
-  text-transform: capitalize;
-}
 .subscribe-form {
   position: relative;
   overflow: hidden;
@@ -171,4 +141,40 @@ ul {
     -webkit-text-fill-color: transparent; /* For WebKit browsers */
     background-clip: text;
     color: transparent; /* For other browsers */
+}
+.s2-subheader{
+  padding: 0 16px;
+  color: #637987;
+  line-height: 1.5;
+}
+.s2-subheader li{
+  padding-bottom: 8px;
+}
+.s2-subheader-bold{
+  color: #0A3348;
+}
+.s4-subheader{
+  font-size: 18px !important;
+font-weight: 500 !important;
+}
+.s8-subheader{
+  font-weight: 500 !important;
+  text-transform: capitalize;
+}
+.s8-subheader:hover{
+  color: #FF1E57;
+  cursor: pointer;
+}
+.base-color-cls{
+  color: #FF1E57;
+}
+a{
+  text-decoration: none;
+  cursor: pointer;
+  color: #757575;
+}
+a:hover{color: #FF1E57;}
+
+ul li:hover::marker {
+  color: #FF1E57; /* Color of the bullet on hover */
 }

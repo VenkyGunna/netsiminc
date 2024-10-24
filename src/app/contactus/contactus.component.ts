@@ -16,13 +16,13 @@ import { Observable } from 'rxjs';
   styleUrl: './contactus.component.scss'
 })
 export class ContactusComponent {
-  
+
   ngOnInit() {
     this.titleService.setTitle('Contact Us');
   }
   contactForm: FormGroup;
   isSubmitting = false;
-  constructor(public fb: FormBuilder, public sb: MatSnackBar,public titleService:Title) {
+  constructor(public fb: FormBuilder, public sb: MatSnackBar, public titleService: Title) {
     this.contactForm = fb.group({
       to_name: ["", [Validators.required, Validators.minLength(6)]],
       from_name: ["NetSim", Validators.required],
@@ -39,9 +39,9 @@ export class ContactusComponent {
       return;
     }
     this.isSubmitting = true;
-    emailjs.init('G-ufuvni0nxMTq765');
+    emailjs.init('NcirJe0kuMOiwg9Lt');
     emailjs
-      .send('service_zje5z6a', 'template_prw1ndh', {
+      .send('service_tye3o4n', 'template_mwal9je', {
         to_name: this.contactForm.value['to_name'],
         to_email: this.contactForm.value['to_email'],
         subject: this.contactForm.value['subject'],
@@ -50,7 +50,11 @@ export class ContactusComponent {
       .then(
         () => {
           this.isSubmitting = false;
-          this.openSnackBar('Form submitted successfully!');
+          // Once email is sent, trigger the modal
+          // Dynamically show the Bootstrap modal after email is sent
+          const modalElement = document.getElementById('staticBackdrop');
+          const modalInstance = new (window as any).bootstrap.Modal(modalElement);  // Accessing bootstrap via the global `window` object
+          modalInstance.show();
           this.contactForm.reset();
         },
         (error) => {
