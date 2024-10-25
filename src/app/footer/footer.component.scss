@@ -175,6 +175,25 @@ a{
 }
 a:hover{color: #FF1E57;}
 
-ul li:hover::marker {
-  color: #FF1E57; /* Color of the bullet on hover */
+ul {
+  list-style: none; /* Remove the default bullet */
+  padding-left: 0;  /* Optional: remove default padding */
+}
+
+ul li {
+  position: relative;
+  padding-left: 20px; /* Add space for the arrow */
+}
+
+ul li::before {
+  content: '\027AD'; /* Unicode for right arrow (→) */
+  color: #757575;   /* Arrow color */
+  font-size: 16px;  /* Adjust the size of the arrow */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+ul li:hover::before {
+  color: #FF5733;   /* Change arrow color on hover */
 }
